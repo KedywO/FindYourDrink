@@ -1,0 +1,67 @@
+.mainR{
+    width: 80%;
+    margin: auto;
+    height: 400px;
+    background-color: #3C3F41;
+    margin-bottom: 30px;
+    display: grid;
+    font-size: 16px;
+    grid-template-columns: 35% auto;
+    grid-auto-rows: 100px 50px 50px 200px;
+    grid-template-areas:
+        "img title"
+        "img alcoholic"
+        "img inde"
+        "img recipie";
+    color: aliceblue;
+
+}
+
+.ingredients{
+    grid-area: inde;
+    text-align: left;
+    margin-left: 15px;
+}
+
+.separator {
+    height: 1px;
+    width: 80%;
+    background-color: aliceblue;
+    margin-top: 2px;
+}
+
+.img {
+    grid-area: img;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    display: block;
+    transform: scale(0.98);
+    transition: all 300ms ;
+}
+
+.img:active{
+    transform: scale(1.2) translateX(-10px);
+    z-index: 1;
+}
+
+
+.title{
+    grid-area: title;
+    font-size: 2.5rem;
+    text-align: left;
+    padding-left: 15px;
+    align-self: center;
+}
+
+.type{
+    grid-area: alcoholic;
+    text-align: left;
+    padding-left: 15px;
+}
+
+.recipie{
+    grid-area: recipie;
+    padding-left: 15px;
+    text-align: justify;
+}

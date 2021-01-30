@@ -1,0 +1,116 @@
+#startMain > div{
+    width: 100%;
+    background-color: brown;
+    height: 100%;
+    margin: auto;
+}
+
+#startMain {
+    display: grid;
+    grid-template-columns: minmax(160px,20%)  minmax(300px,40%);
+    grid-template-rows: minmax(160px, 30vh) 30vh;
+    justify-content: center;
+    grid-gap: 30px;
+    margin-top: 50px;
+    grid-template-areas:
+    "alldrinks about"
+    "search about";
+    grid-auto-flow: dense;
+    min-height: 300px;
+    max-height: 400px;
+    margin-bottom: 100px;
+}
+
+
+.alldrinks {
+    grid-area: alldrinks;
+    background-image: url("https://images.ctfassets.net/kjc0jmow0idt/6jWv6niSs0S6SMaIqqmIM4/b73b07bd71764a6c3a8fe9628c2d55bc/drinks-share.jpg?w=900&h=900");
+    object-fit: contain;
+    background-position: center;
+    position: relative;
+    min-height: 160px;
+}
+
+.alldrinks-cover {
+    position: absolute;
+    width: 100%;
+    height: 0;
+    background-color: #000000;
+    opacity: 0.8;
+    transition: all 500ms ease;
+    color: #61dafb;
+    display: grid;
+    place-items: center;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+.alldrinks-cover > h3 {
+    position: relative;
+    top:-10px;
+    opacity: 1;
+    font-size: 24px;
+}
+
+.alldrinks:hover .alldrinks-cover {
+    height: 100%;
+}
+
+.searchdrinks {
+    grid-area: search;
+    object-fit: contain;
+    background-image: url("https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/ras/Assets/ACF80336-78D6-42EF-B150-56A7D4CC4756/Derivates/16B54734-7612-402C-9369-790CDB42741B.jpg");
+    background-position: center center;
+    position: relative;
+    min-height: 160px;
+}
+
+.searchdrinks-cover:hover{
+    opacity: 0.5;
+}
+
+
+.searchdrinks-cover{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    opacity: 0;
+    transition: all 500ms ease;
+    color: #61dafb;
+    display: grid;
+    place-items: center;
+    text-decoration: none;
+
+}
+
+.icons {
+    position: absolute;
+    bottom: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.searchdrinks-cover > h3 {
+    position: relative;
+    top:-10px;
+    opacity: 1;
+    font-size: 24px;
+}
+.credits {
+    grid-area: about;
+    position: relative;
+    min-height: 350px;
+}
+
+.credits-text {
+    text-align: left;
+    padding-left: 15px;
+    margin-top: 20px;
+}
+
+.credits> p {
+    text-align: justify;
+    padding-right: 15px;
+}

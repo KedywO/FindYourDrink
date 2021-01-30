@@ -1,0 +1,44 @@
+.searchbar{
+    width: auto;
+    display: flex;
+}
+
+
+
+.searchbar > input {
+    width: 100vw;
+    border: none;
+    background-color: darkslategray;
+    height: 30px;
+    transition: all 300ms ease;
+    padding: 0 10px 0 10px;
+    z-index: 200;
+    transform: translateX(-100%);
+    text-align: right;
+}
+#searchB{
+    height: 30px;
+    background-color: darkslategray;
+    padding: 0;
+    z-index: 200;
+    border: 0;
+    padding: 0 5px 0 5px;
+    cursor: pointer;
+}
+
+a{
+    z-index: 200;
+}
+
+.searchbar > button:focus{
+    outline: none;
+}
+
+.searchbar > input:focus{
+    outline: none;
+    background-color: darkslategray;
+    transform: translateX(0);
+}
+
+
+

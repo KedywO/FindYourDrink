@@ -1,0 +1,10 @@
+.main{
+    width: 80%;
+    background-color: #171b23;
+    height: auto;
+    margin: auto;
+    padding-top: 30px;
+    min-height: 100vh;
+    color: aliceblue;
+    padding-bottom: 30px;
+}
