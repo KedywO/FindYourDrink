@@ -15,7 +15,8 @@
         "img recipie";
     color: aliceblue;
     min-width: 400px;
-    overflow:auto;
+    overflow-y: auto;
+    position: relative;
 }
 
 .ingredients{
@@ -42,12 +43,6 @@
     background-position: right;
 }
 
-.img:active{
-    transform: scale(1.2) translateX(-10px);
-    z-index: 1;
-}
-
-
 .title{
     grid-area: title;
     font-size: 2.5rem;
@@ -62,12 +57,14 @@
     padding-left: 15px;
 }
 
+.mainR > .recipie{
+    overflow: hidden;
+}
 .recipie{
     grid-area: recipie;
     padding-left: 15px;
     text-align: justify;
     padding-right: 10px;
     display: table;
-    overflow-y: scroll;
     height: 200px;
 }

@@ -1,7 +1,7 @@
 import React,{useState} from "react";
 import './Drinks.css';
 import searchAxios from "../groceryaxios";
-import Result from "../searchsite/result/Result";
+import Result from "../result/Result";
 
 
 export default function Drinks(){

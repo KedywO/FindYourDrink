@@ -1,8 +1,10 @@
 import React,{useEffect, useState} from "react";
 import './Result.css';
+import ImgModal from "../drinks/modal/ImgModal";
 
 export default function Result({drink}){
     const [ingredients, setIngredients] = useState();
+    const [showModal, setShowModal] = useState(false);
 
     useEffect(()=>{
         var help = drink.strIngredient1;
@@ -16,7 +18,7 @@ export default function Result({drink}){
 
     return (
         <div className="mainR">
-            <img className="img" src={drink.strDrinkThumb} alt={drink.strDrink} />
+            <img onClick={()=>setShowModal(!showModal)} className="img" src={drink.strDrinkThumb} alt={drink.strDrink} />
             <div className="title">
                 {drink.strDrink}
                 <div className='separator'/>
@@ -30,6 +32,7 @@ export default function Result({drink}){
                 <div className='separator'/>
             </div>
             <div className="recipie">Recipe: {drink.strInstructions}</div>
+            <ImgModal onClose={()=> setShowModal(false)} show={showModal} img={drink.strDrinkThumb} />
         </div>
     )
 }
