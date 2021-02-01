@@ -9,7 +9,7 @@ export default function StartSide(){
 
     const copyMail = async () => {
         var textField = document.createElement('textarea');
-        textField.innerText = 'kodzi1234@gmail.com';
+        textField.innerText = 'r.wyszynski00@gmail.com';
         document.body.appendChild(textField);
         textField.select();
         document.execCommand('copy');
@@ -35,9 +35,9 @@ export default function StartSide(){
                 <h3 className='credits-text'>Rado Radosny</h3>
                 <p  className='credits-text'>Animalis, hydra, et nixus.When draining dark mackerels, be sure they are room temperature.Planets warp with moon!Eheu, impositio!Domus de dexter racana, attrahendam contencio!</p>
                 <div className='icons'>
-                <a href='https://github.com/KedywO' target='_blank'><FaGithubSquare className='social-link' size={64} color="black"/> </a>
-                <a href='#'><FaFacebookSquare className='social-link' size={64} color="black"/> </a>
-                <a href='#'><SiGmail onClick={copyMail} className='social-link' size={64} color="black"/> </a>
+                <a title='github.com/KedywO' href='https://github.com/KedywO' target='_blank'><FaGithubSquare className='social-link' size={64} color="black"/> </a>
+                <a title='No link' href='#'><FaFacebookSquare className='social-link' size={64} color="black"/> </a>
+                <a title='Click to copy my mail!' href='#'><SiGmail onClick={copyMail} className='social-link' size={64} color="black"/> </a>
                 </div>
             </div>
             <span id='popup'>Mail copied to clipboard</span>
