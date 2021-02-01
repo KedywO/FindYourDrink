@@ -14,7 +14,8 @@
         "img inde"
         "img recipie";
     color: aliceblue;
-
+    min-width: 400px;
+    overflow:auto;
 }
 
 .ingredients{
@@ -38,6 +39,7 @@
     display: block;
     transform: scale(0.98);
     transition: all 300ms ;
+    background-position: right;
 }
 
 .img:active{
@@ -64,4 +66,8 @@
     grid-area: recipie;
     padding-left: 15px;
     text-align: justify;
+    padding-right: 10px;
+    display: table;
+    overflow-y: scroll;
+    height: 200px;
 }

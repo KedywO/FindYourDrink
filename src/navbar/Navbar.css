@@ -4,7 +4,8 @@
     height: 46px;
     justify-content: space-between;
     padding: 0 15px 0 15px;
-
+    width: 80vw;
+    margin: auto;
 }
 
 .fallBack{
@@ -14,7 +15,7 @@
     background: rgba(0,0,0,0.5);
     top:0;
     left: 0;
-    z-index: 100;
+    z-index: 150;
 }
 
 .header{
@@ -23,6 +24,7 @@
     left: 0;
     width: 100vw;
     z-index: 2;
+    background-color: #2b2e31;
 }
 
 .nav-a{
@@ -30,6 +32,7 @@
     text-decoration: none;
     color: aliceblue;
     height: 100%;
+    z-index: 0;
 }
 
 #searchBtn{

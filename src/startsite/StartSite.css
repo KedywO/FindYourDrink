@@ -65,10 +65,49 @@
     min-height: 160px;
 }
 
+@keyframes pop-upCopy {
+    0% {opacity: .5}
+    50% {transform: translateY(-10px); opacity: 1}
+    100% {transform: translateY(0px); opacity: 0}
+}
+
+.animation-popupCopy{
+    animation: pop-upCopy;
+    animation-duration: 800ms;
+}
+
+#popup {
+    position: absolute;
+    bottom: 150px;
+    opacity: 0;
+    left: 46%;
+    transition: all 100ms ease;
+    font-weight: bold;
+    color: aliceblue;
+    width: auto ;
+    height: auto ;
+    background-color: darkslategray ;
+    border-radius: 5px;
+    padding: 15px;
+    z-index: 1000 ;
+
+}
+
+.show{
+    display: block;
+}
+
 .searchdrinks-cover:hover{
     opacity: 0.5;
 }
 
+.social-link {
+    transition: all 200ms ease;
+}
+
+.social-link:hover{
+    transform: scale(0.9);
+}
 
 .searchdrinks-cover{
     position: absolute;
@@ -81,6 +120,7 @@
     display: grid;
     place-items: center;
     text-decoration: none;
+    z-index: 0;
 
 }
 
