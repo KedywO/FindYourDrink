@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/FindYourDrink/static/css/main.02b5f43d.chunk.css",
+    "main.css": "/FindYourDrink/static/css/main.fdcf08cc.chunk.css",
     "main.js": "/FindYourDrink/static/js/main.2aaca55f.chunk.js",
     "main.js.map": "/FindYourDrink/static/js/main.2aaca55f.chunk.js.map",
     "runtime-main.js": "/FindYourDrink/static/js/runtime-main.4f74c4fc.js",
@@ -8,13 +8,13 @@
     "static/js/2.92047744.chunk.js": "/FindYourDrink/static/js/2.92047744.chunk.js",
     "static/js/2.92047744.chunk.js.map": "/FindYourDrink/static/js/2.92047744.chunk.js.map",
     "index.html": "/FindYourDrink/index.html",
-    "static/css/main.02b5f43d.chunk.css.map": "/FindYourDrink/static/css/main.02b5f43d.chunk.css.map",
+    "static/css/main.fdcf08cc.chunk.css.map": "/FindYourDrink/static/css/main.fdcf08cc.chunk.css.map",
     "static/js/2.92047744.chunk.js.LICENSE.txt": "/FindYourDrink/static/js/2.92047744.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.4f74c4fc.js",
     "static/js/2.92047744.chunk.js",
-    "static/css/main.02b5f43d.chunk.css",
+    "static/css/main.fdcf08cc.chunk.css",
     "static/js/main.2aaca55f.chunk.js"
   ]
 }
