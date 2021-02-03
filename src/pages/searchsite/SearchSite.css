@@ -8,3 +8,10 @@
     color: aliceblue;
     padding-bottom: 30px;
 }
+
+@media only screen and (max-width: 700px) {
+    .main{
+        width: 100%;
+
+    }
+}
