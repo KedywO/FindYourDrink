@@ -14,7 +14,7 @@ export default function Navbar({setFrase}){
     return (
         <header className="header">
             <nav className="nav">
-                <Link to='/' className="nav-a"><h3>drinkIT!</h3></Link>
+                <Link to='/FindYourDrink' className="nav-a"><h3>drinkIT!</h3></Link>
                 <Link to='/drinks' className="nav-a"><h3>Drinks</h3></Link>
                 <Link className="nav-a"><h3>Your drinks</h3></Link>
                 <h3 onClick={()=>{setSearchbar(!searchbar)}} id="searchBtn">Search</h3>
