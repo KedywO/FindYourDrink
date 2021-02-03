@@ -1,10 +1,10 @@
 import './App.css';
 import React, {useState} from 'react';
-import Navbar from "./navbar/Navbar";
-import SearchSite from "./searchsite/SearchSite";
+import Navbar from "./components/navbar/Navbar";
+import SearchSite from "./pages/searchsite/SearchSite";
 import {Route} from "react-router";
-import StartSite from "./startsite/StartSite";
-import Drinks from "./drinks/Drinks";
+import StartSite from "./pages/startsite/StartSite";
+import Drinks from "./pages/drinks/Drinks";
 import $ from 'jquery';
 import {FiChevronsUp} from 'react-icons/fi';
 
@@ -32,7 +32,7 @@ const App = () =>{
       <div className="spacer" />
       <main>
           <Route exact path='/search' render={()=> <SearchSite frase={searchFrase} />} />
-          <Route exact path='/' render={()=> <StartSite />}/>
+          <Route exact path='/FindYourDrink' render={()=> <StartSite />}/>
           <Route exact path='/drinks' render={()=> <Drinks />}/>
           <div className='scroll-up'>GO GORY</div>
           <div  id='scrl-btn' className='scroll-up'><FiChevronsUp onClick={scrollUp} size={48} color={"white"}/></div>

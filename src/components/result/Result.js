@@ -1,6 +1,6 @@
 import React,{useEffect, useState} from "react";
 import './Result.css';
-import ImgModal from "../drinks/modal/ImgModal";
+import ImgModal from "../../pages/drinks/modal/ImgModal";
 
 export default function Result({drink}){
     const [ingredients, setIngredients] = useState();
