@@ -1,11 +1,11 @@
-import React,{useState} from "react";
+import React,{useState, useEffect} from "react";
 import './Drinks.css';
 import searchAxios from "../../adapters/groceryaxios";
 import Result from "../../components/result/Result";
 
 
 export default function Drinks(){
-    const [alphabet,setAlphabet] = useState(['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','R','S','T','U','V','W','X','Y','Z']);
+    const alphabet= ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','R','S','T','U','V','W','X','Y','Z'];
     const [drinks, setDrinks] = useState([]);
 
     const getDrinkByLetter = (e) =>{
@@ -17,6 +17,16 @@ export default function Drinks(){
         }
         fetchSearch();
     }
+
+    useEffect(()=>{
+        const fetchSearch = async () =>{
+            const request = await searchAxios.get(`search.php?f=a`)
+            console.log(request.data.drinks);
+            setDrinks(request.data.drinks);
+            return request;
+        }
+        fetchSearch();
+    },[])
 
     return (
         <div className='mainDrinks'>

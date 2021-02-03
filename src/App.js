@@ -10,7 +10,6 @@ import {FiChevronsUp} from 'react-icons/fi';
 
 var SCROLL_UP_BTN;
 const App = () =>{
-    const[searchFrase,setFrase] = useState("");
     $(window).scroll(function() {
         if ($(window).scrollTop() > 400) {
             $('#scrl-btn').addClass('show');
@@ -18,7 +17,6 @@ const App = () =>{
             $('#scrl-btn').removeClass('show');
         }
     });
-
     const scrollUp = (e) =>{
         console.log("chuj");
         e.preventDefault();
@@ -28,10 +26,10 @@ const App = () =>{
 
   return (
     <div className="App">
-      <Navbar setFrase={setFrase} />
+      <Navbar />
       <div className="spacer" />
       <main>
-          <Route exact path='/search' render={()=> <SearchSite frase={searchFrase} />} />
+          <Route exact path='/search' render={()=> <SearchSite />} />
           <Route exact path='/FindYourDrink' render={()=> <StartSite />}/>
           <Route exact path='/drinks' render={()=> <Drinks />}/>
           <div className='scroll-up'>GO GORY</div>
