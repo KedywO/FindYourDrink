@@ -43,6 +43,7 @@
     place-items: center;
     text-decoration: none;
     overflow: hidden;
+    z-index: 0;
 }
 
 .alldrinks-cover > h3 {

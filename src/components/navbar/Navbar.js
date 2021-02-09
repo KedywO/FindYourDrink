@@ -5,12 +5,15 @@ import Searchbar from "../searchbar/Searchbar";
 import {useDispatch, useSelector} from "react-redux";
 import {
     fromSearchBtnAction,
-    hideSearchbarAction, notFromSearchBtnAction,
+    hideSearchbarAction,
+    notFromSearchBtnAction,
     showSearchbarAction
 } from "../../context/reducers/showSearchbarReducer";
-import {store} from "../../context/mainState";
+import LoginPopup from "../../modals/LoginModal/LoginPopup";
+
 
 export default function Navbar(){
+    const [loginModal, setLoginModal] = useState(false);
     const searchbar = useSelector(state => state.showSearchbarReducer.showSearchbar);
     const dispatch = useDispatch();
 
@@ -30,10 +33,12 @@ export default function Navbar(){
                 <Link to='/FindYourDrink' className="nav-a"><h3>drinkIT!</h3></Link>
                 <Link to='/drinks' className="nav-a"><h3>Drinks</h3></Link>
                 <Link className="nav-a"><h3>Your drinks</h3></Link>
-                <h3 onClick={()=>{showSearchbar();fromSearchBtn();}} id="searchBtn">Search</h3>
+                <h3 onClick={()=>{showSearchbar();fromSearchBtn();}} className="searchBtn">Search</h3>
+                <h3 onClick={()=>{setLoginModal(prevState => !prevState)}} className='searchBtn'>Login</h3>
             </nav>
             {searchShow}
             {searchbar? <div className="fallBack" onClick={() => {hideSearchbar(); notFromSearchBtn();}} />: null}
+            <LoginPopup closeLogin={setLoginModal} showLogin={loginModal} />
         </header>
     )
 }

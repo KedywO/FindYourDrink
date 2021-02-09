@@ -7,6 +7,7 @@ import StartSite from "./pages/startsite/StartSite";
 import Drinks from "./pages/drinks/Drinks";
 import $ from 'jquery';
 import {FiChevronsUp} from 'react-icons/fi';
+import LoginPopup from "./modals/LoginModal/LoginPopup";
 
 var SCROLL_UP_BTN;
 const App = () =>{
@@ -32,7 +33,7 @@ const App = () =>{
           <Route exact path='/search' render={()=> <SearchSite />} />
           <Route exact path='/FindYourDrink' render={()=> <StartSite />}/>
           <Route exact path='/drinks' render={()=> <Drinks />}/>
-          <div className='scroll-up'>GO GORY</div>
+
           <div  id='scrl-btn' className='scroll-up'><FiChevronsUp onClick={scrollUp} size={48} color={"white"}/></div>
       </main>
     </div>

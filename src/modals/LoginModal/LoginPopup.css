@@ -1,0 +1,65 @@
+.main-login{
+    width: 300px;
+    /*height: 300px;*/
+    position: fixed;
+    background-color: #171b23;
+    display: grid;
+    place-items: center;
+    right: 0;
+    height: 0;
+    transform: translateY(-400px);
+    z-index: -2;
+    transition: all 0.5s ease-in-out;
+    overflow: hidden;
+}
+
+.show-login{
+    height: 300px;
+    animation-name: pop-down;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.hide-login{
+    height: 300px;
+    animation-name: pop-up;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes pop-up {
+    0% {transform: translateY(30px)}
+    50% {transform: translateY(45px)}
+    100% {transform: translateY(-400px)}
+}
+
+@keyframes pop-down {
+    0% {transform: translateY(-400px)}
+    75% {transform: translateY(45px)}
+    100% {transform: translateY(30px)}
+}
+
+.login-input{
+    width: 150px;
+    outline: none;
+    margin: 20px 0;
+    text-align: center;
+    line-height: 24px;
+    overflow: hidden;
+}
+
+.password-input{
+    width: 150px;
+    outline: none;
+    margin: 20px 0;
+    text-align: center;
+    line-height: 24px;
+    overflow: hidden;
+}
+
+.login-btn{
+    width: 160px;
+    height: 24px;
+    margin: 20px 0;
+    overflow: hidden;
+}

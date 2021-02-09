@@ -3,9 +3,8 @@
     display: flex;
     height: 46px;
     justify-content: space-between;
-    padding: 0 15px 0 15px;
-    width: 80vw;
-    margin: auto;
+    padding: 0 50px;
+    width: 100vw;
     min-width: 600px;
 }
 
@@ -24,8 +23,9 @@
     top: 0;
     left: 0;
     width: 100vw;
-    z-index: 2;
+    z-index: 4;
     background-color: #2b2e31;
+    display: flex;
 }
 
 .nav-a{
@@ -36,7 +36,7 @@
     z-index: 0;
 }
 
-#searchBtn{
+.searchBtn{
     display: block;
     text-decoration: none;
     color: aliceblue;
@@ -46,7 +46,7 @@
     cursor: pointer;
 }
 
-#searchBtn:hover {
+.searchBtn:hover {
     background-color: #171b23;
 }
 
