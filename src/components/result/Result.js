@@ -14,7 +14,7 @@ export default function Result({drink}){
             }
         }
         setIngredients(help);
-    },[])
+    },[drink])
 
     return (
         <div className="mainR">

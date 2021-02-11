@@ -13,8 +13,6 @@ export default function SearchSite(){
     const dispatch = useDispatch();
     const showSearchbar = () => dispatch(showSearchbarAction());
     const removeFromSearchBtn = () => dispatch(notFromSearchBtnAction());
-
-    var searchbar;
     useEffect(()=>{
         const fetchSearch = async () =>{
             const request = await searchAxios.get(`search.php?s=${frase}`)

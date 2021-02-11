@@ -1,13 +1,15 @@
 import React, {useState, useEffect} from "react";
 import './LoginPopup.css';
 import $ from 'jquery';
-import dbLogin from "../../dbAxios";
+import {dbLogin} from "../../dbAxios";
+import {useDispatch} from "react-redux";
+import {setJwtAction} from "../../context/reducers/jwtReducer";
 
 const LoginPopup = ({showLogin, closeLogin}) => {
     const [login, setLogin] = useState('');
     const [password, setPassword] = useState('');
-
-
+    const dispatch = useDispatch();
+    const setJwt = jwt => dispatch(setJwtAction(jwt));
     useEffect(()=>{
         if(showLogin){
             $('#login-modal').addClass('show-login');
@@ -21,10 +23,12 @@ const LoginPopup = ({showLogin, closeLogin}) => {
 
 
 
-    const onLogin = (e) => {
+    const onLogin = async (e) => {
         e.preventDefault();
         console.log(login, password);
-        dbLogin(login,password);
+        // setJwt(await dbLogin(login,password));
+        console.log( await dbLogin(login,password, setJwt), " test");
+
     }
     return (
         <div id='login-modal' className='main-login'>
@@ -38,5 +42,7 @@ const LoginPopup = ({showLogin, closeLogin}) => {
         </div>
     )
 }
+
+
 
 export default LoginPopup;

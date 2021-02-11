@@ -1,9 +1,8 @@
 import axios from 'axios';
 
-const dbAxios = axios.create({baseURL: "http://localhost:3000/"});
+const dbAxios = axios.create({baseURL: "http://localhost:3001/"});
 
-const dbLogin = (login, password) => {
-
+const dbLogin = (login, password, setter) => {
     // let data = JSON.stringify({
     //     username: login,
     //     password: password
@@ -12,10 +11,16 @@ const dbLogin = (login, password) => {
         username: login,
         password: password
     }).then(res => {
-        console.log(res);
+        setter(res.data.token);
     }).catch(err => {
         console.error(err);
     });
 }
 
-export default dbLogin;
+const getUserById = (id, jwt) => {
+    dbAxios.get(`/user/${id}`, {headers: {Authorization: `Bearer ${jwt}`}})
+        .then(res => console.log(res))
+        .catch(err => console.log(err));
+}
+
+export {getUserById, dbLogin};

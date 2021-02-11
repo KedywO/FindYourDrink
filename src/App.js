@@ -1,5 +1,5 @@
 import './App.css';
-import React, {useState} from 'react';
+import React from 'react';
 import Navbar from "./components/navbar/Navbar";
 import SearchSite from "./pages/searchsite/SearchSite";
 import {Route} from "react-router";
@@ -7,9 +7,9 @@ import StartSite from "./pages/startsite/StartSite";
 import Drinks from "./pages/drinks/Drinks";
 import $ from 'jquery';
 import {FiChevronsUp} from 'react-icons/fi';
-import LoginPopup from "./modals/LoginModal/LoginPopup";
 
-var SCROLL_UP_BTN;
+
+
 const App = () =>{
     $(window).scroll(function() {
         if ($(window).scrollTop() > 400) {

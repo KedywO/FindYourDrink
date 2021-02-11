@@ -8,7 +8,7 @@ const ImgModal = ({show, onClose,img}) => {
 
     return (
         <div onClick={onClose} className='modalFallback'>
-            <img className='modalMain' src={img} />
+            <img className='modalMain' src={img} alt={`${img}`} />
         </div>
     )
 }

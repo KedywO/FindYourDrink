@@ -35,7 +35,7 @@ export default function StartSide(){
                 <h3 className='credits-text'>Rado Radosny</h3>
                 <p  className='credits-text'>Animalis, hydra, et nixus.When draining dark mackerels, be sure they are room temperature.Planets warp with moon!Eheu, impositio!Domus de dexter racana, attrahendam contencio!</p>
                 <div className='icons'>
-                <a title='github.com/KedywO' href='https://github.com/KedywO' target='_blank'><FaGithubSquare className='social-link' size={64} color="black"/> </a>
+                <a title='github.com/KedywO' rel="noreferrer" href='https://github.com/KedywO' target='_blank'><FaGithubSquare className='social-link' size={64} color="black"/> </a>
                 <a title='No link' href='#'><FaFacebookSquare className='social-link' size={64} color="black"/> </a>
                 <a title='Click to copy my mail!' href='#'><SiGmail onClick={copyMail} className='social-link' size={64} color="black"/> </a>
                 </div>

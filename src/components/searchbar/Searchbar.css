@@ -1,6 +1,10 @@
 .searchbar{
-    width: auto;
+    width: 100%;
     display: flex;
+    position: fixed;
+    top: 46px;
+    left: 0;
+    z-index: 200;
 }
 
 
@@ -38,6 +42,7 @@ a{
     background-color: darkslategray;
     transform: translateX(0);
 }
+
 
 
 
